@@ -156,6 +156,14 @@ class ChatterboxTTSBackend:
             "temperature": 0.65,
             "repetition_penalty": 2.5,
         },
+        # en: stronger reference adherence for cloned voices - the stock 0.5/0.8
+        # drifts generic-TTS on real-person clones (Zach shootout 2026-07-21)
+        "en": {
+            "exaggeration": 0.45,
+            "cfg_weight": 0.75,
+            "temperature": 0.65,
+            "repetition_penalty": 2.0,
+        },
     }
     _GLOBAL_DEFAULTS: ClassVar[dict] = {
         "exaggeration": 0.5,
